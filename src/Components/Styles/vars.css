@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&family=Spartan:wght@400;700&display=swap");
+
+:root {
+  --font-one: "Antonio", sans-serif;
+  --font-two: "Spartan", sans-serif;
+
+  /* === Colors === */
+  --white: hsl(0, 0%, 100%);
+  --main-bg: hsl(240, 67%, 8%);
+  --color1: hsl(240, 17%, 26%);
+  --color2: hsl(240, 6%, 54%);
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* = Planet Colors = */
+  --Mercury: hsl(196, 83%, 93%);
+  --Venus: hsl(39, 88%, 73%);
+  --Earth: hsl(238, 99%, 66%);
+  --Mars: hsl(11, 100%, 64%);
+  --Jupiter: hsl(27, 75%, 70%);
+  --Saturn: hsl(40, 96%, 70%);
+  --Uranus: hsl(168, 82%, 67%);
+  --Neptune: hsl(222, 95%, 63%);
+
+  --Mercury-theme: hsl(194, 48%, 49%);
+  --Venus-theme: hsl(33, 82%, 61%);
+  --Earth-theme: hsl(263, 67%, 51%);
+  --Mars-theme: hsl(10, 63%, 51%);
+  --Jupiter-theme: hsl(2, 68%, 53%);
+  --Saturn-theme: hsl(17, 73%, 46%);
+  --Uranus-theme: hsl(169, 73%, 44%);
+  --Neptune-theme: hsl(222, 87%, 56%);
+}
