@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: thin solid var(--border);
+}
+
+.option {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px inset transparent;
+  border-bottom: 4px inset transparent;
+}
+
+.theme {
+  border-bottom-color: var(--Mercury-theme);
+}
+
+.title {
+  color: var(--white);
+  font-family: var(--font-two);
+  font-size: clamp(7px, 2.5vw, 10px);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 2em 0;
+}
