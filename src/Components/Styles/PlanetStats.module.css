@@ -1,0 +1,34 @@
+.statistic {
+  width: 85%;
+  box-sizing: border-box;
+  margin-bottom: 0.7rem;
+  padding: 0 2rem;
+  border: thin solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title,
+.amount {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-two);
+  font-size: clamp(7px, 2.3vw, 9px);
+  font-weight: 700;
+  color: var(--white);
+  opacity: 0.5;
+  letter-spacing: 0.73px;
+}
+
+.amount {
+  margin: 0.7rem 0;
+  font-family: var(--font-one);
+  font-size: clamp(19px, 5.5vw, 21px);
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: -0.75px;
+}

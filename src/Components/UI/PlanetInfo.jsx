@@ -1,21 +1,18 @@
 import styles from "../Styles/PlanetInfo.module.css";
 
-import photo from "../Assets/planet-mercury.svg";
-import data from "../../Helpers/data.json";
-
-const PlanetInfo = () => {
+const PlanetInfo = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles["img-container"]}>
-        <img className={styles.img} src={photo} />
+        <img className={styles.img} src={props.photo} />
       </div>
       <div className={styles["info-container"]}>
-        <p className={styles.name}>{data[0].name}</p>
-        <p className={styles.description}>{data[0].overview.content}</p>
+        <p className={styles.name}>{props.name}</p>
+        <p className={styles.description}>{props.description}</p>
       </div>
       <div className={styles["link-container"]}>
         <p className={styles.source}>Source:</p>
-        <a className={styles.link} href={data[0].overview.source}>
+        <a className={styles.link} href={props.source}>
           Wikipedia
         </a>
         <svg

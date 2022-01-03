@@ -3,3 +3,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.statistics-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
