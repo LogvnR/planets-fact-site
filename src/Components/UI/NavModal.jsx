@@ -14,6 +14,7 @@ const NavModal = (props) => {
         <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
           {planets.map((planet) => (
             <NavBarPlanet
+              close={props.close}
               className={styles["navbar-item"]}
               name={planet.name}
             />

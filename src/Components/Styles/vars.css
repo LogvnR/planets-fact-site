@@ -29,4 +29,14 @@
   --Saturn-theme: hsl(17, 73%, 46%);
   --Uranus-theme: hsl(169, 73%, 44%);
   --Neptune-theme: hsl(222, 87%, 56%);
+
+  /* = Planet Sizes = */
+  --Mercury-size: 30.5%;
+  --Venus-size: 42.5%;
+  --Earth-size: 48.1%;
+  --Mars-size: 36%;
+  --Jupiter-size: 62.3%;
+  --Saturn-size: 71.1%;
+  --Uranus-size: 49%;
+  --Neptune-size: 48%;
 }

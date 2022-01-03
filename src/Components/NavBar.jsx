@@ -3,6 +3,7 @@ import { Fade as Hamburger } from "hamburger-react";
 
 import styles from "./Styles/NavBar.module.css";
 import NavModal from "./UI/NavModal";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,7 +22,10 @@ const NavBar = () => {
 
   return (
     <header className={styles.navbar}>
-      <p className={styles["logo-title"]}>The Planets</p>
+      <Link to="/">
+        <p className={styles["logo-title"]}>The Planets</p>
+      </Link>
+
       <Hamburger
         className={styles.hamburger}
         color="#fff"
@@ -29,7 +33,7 @@ const NavBar = () => {
         toggled={modalOpen}
         onToggle={handleClickBtn}
       />
-      {modalOpen && <NavModal />}
+      {modalOpen && <NavModal close={closeModal} />}
     </header>
   );
 };

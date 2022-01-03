@@ -31,6 +31,7 @@ const Planet = (props) => {
   return (
     <main className={styles.planet}>
       <PlanetInfoSelect
+        name={props.planet.name}
         overviewTab={overviewTab}
         overviewTabHandler={overviewTabHandler}
         structureTab={structureTab}
@@ -44,6 +45,7 @@ const Planet = (props) => {
           name={props.planet.name}
           description={props.planet.overview.content}
           source={props.planet.overview.source}
+          surfaceIcon={false}
         />
       )}
       {structureTab && (
@@ -52,6 +54,7 @@ const Planet = (props) => {
           name={props.planet.name}
           description={props.planet.structure.content}
           source={props.planet.structure.source}
+          surfaceIcon={false}
         />
       )}
       {surfaceTab && (
@@ -60,6 +63,7 @@ const Planet = (props) => {
           name={props.planet.name}
           description={props.planet.geology.content}
           source={props.planet.geology.source}
+          surfaceIcon={props.planet.images.geology}
         />
       )}
       <div className={styles["statistics-container"]}>

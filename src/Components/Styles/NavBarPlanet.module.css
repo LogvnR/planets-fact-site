@@ -1,5 +1,11 @@
-.main-container {
+a {
   width: 85%;
+  display: block;
+  text-decoration: none;
+}
+
+.main-container {
+  width: 100%;
   padding: 1.5rem 0;
   box-sizing: border-box;
   display: flex;

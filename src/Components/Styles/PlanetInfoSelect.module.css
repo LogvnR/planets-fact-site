@@ -13,12 +13,11 @@
   align-items: center;
   border-top: 4px inset transparent;
   border-bottom: 4px inset transparent;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .theme {
-  transition: all 0.25s ease-in-out;
-  border-bottom-color: var(--Mercury-theme);
+  transition: all 0.35s ease-in-out;
 }
 
 .title {

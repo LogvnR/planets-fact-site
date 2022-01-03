@@ -5,6 +5,11 @@ const PlanetInfoSelect = (props) => {
     <div className={styles.container}>
       <div
         onClick={props.overviewTabHandler}
+        style={
+          props.overviewTab
+            ? { borderBottomColor: `var(--${props.name}-theme)` }
+            : { borderBottomColor: "transparent" }
+        }
         className={
           props.overviewTab ? `${styles.option} ${styles.theme}` : styles.option
         }
@@ -13,6 +18,11 @@ const PlanetInfoSelect = (props) => {
       </div>
       <div
         onClick={props.structureTabHandler}
+        style={
+          props.structureTab
+            ? { borderBottomColor: `var(--${props.name}-theme)` }
+            : { borderBottomColor: "transparent" }
+        }
         className={
           props.structureTab
             ? `${styles.option} ${styles.theme}`
@@ -23,6 +33,11 @@ const PlanetInfoSelect = (props) => {
       </div>
       <div
         onClick={props.surfaceTabHandler}
+        style={
+          props.surfaceTab
+            ? { borderBottomColor: `var(--${props.name}-theme)` }
+            : { borderBottomColor: "transparent" }
+        }
         className={
           props.surfaceTab ? `${styles.option} ${styles.theme}` : styles.option
         }
