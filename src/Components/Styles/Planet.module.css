@@ -36,8 +36,46 @@
 
   .statistics-container {
     width: 90%;
-    margin: 2rem auto;
+    margin: 2rem auto 0;
     flex-direction: row;
     gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .planet-container {
+    box-sizing: border-box;
+    margin-top: 4rem;
+    padding: 0 5rem;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-areas:
+      "photo photo info"
+      "photo photo info"
+      "photo photo select";
+  }
+
+  .statistics-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8rem;
+    margin: 3rem auto 2.5rem;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .planet {
+    margin: 5rem 0;
+  }
+
+  .planet-container {
+    padding: 0 10rem;
+    margin-top: 0;
+  }
+
+  .statistics-container {
+    margin: 5.5rem auto 2.5rem;
+    padding: 0 13rem;
   }
 }

@@ -80,3 +80,27 @@
     margin: 0;
   }
 }
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    padding: 0 0 1.5rem 3rem;
+    justify-content: flex-end;
+  }
+
+  .name {
+    font-size: 80px;
+  }
+
+  .info-container {
+    height: 100%;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .source,
+  .link {
+    font-size: 14px;
+  }
+}

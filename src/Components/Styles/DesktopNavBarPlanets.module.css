@@ -22,3 +22,15 @@
   letter-spacing: 1px;
   color: var(--white);
 }
+
+@media only screen and (min-width: 1280px) {
+  .planet {
+    margin: 1.2rem 0 0.8rem;
+    opacity: 0.75;
+  }
+
+  .container:hover > .planet {
+    transition: opacity 0.35s ease-in-out;
+    opacity: 1;
+  }
+}

@@ -29,7 +29,7 @@ const NavBar = (props) => {
 
   return (
     <header className={styles.navbar}>
-      <Link onClick={closeModal} to="/">
+      <Link className={styles["main-title"]} onClick={closeModal} to="/">
         <p className={styles["logo-title"]}>The Planets</p>
       </Link>
 

@@ -6,3 +6,16 @@
   align-items: center;
   gap: 0.7rem;
 }
+
+@media only screen and (min-width: 1024px) {
+  .desktop-nav {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .desktop-nav {
+    width: 65%;
+    justify-content: flex-end;
+  }
+}

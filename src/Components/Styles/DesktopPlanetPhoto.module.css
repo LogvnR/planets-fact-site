@@ -29,3 +29,26 @@
     width: 80%;
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  .img-container {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    justify-content: center;
+  }
+
+  .img-container {
+    width: 73%;
+    max-width: 590px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .img-container {
+    max-width: 700px;
+  }
+}
