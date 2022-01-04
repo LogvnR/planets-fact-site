@@ -53,3 +53,12 @@
 .navbar-item:last-of-type {
   border-bottom: none;
 }
+
+@media (orientation: landscape) {
+  .modalContainer {
+    top: 18vh;
+  }
+  .modal {
+    overflow-y: scroll;
+  }
+}

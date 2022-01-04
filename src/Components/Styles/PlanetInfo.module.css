@@ -64,7 +64,7 @@
 .link {
   margin: 2rem 0;
   font-family: var(--font-two);
-  font-size: 3.3vw;
+  font-size: clamp(10px, 3.3vw, 12px);
   font-weight: 400;
   color: var(--white);
   opacity: 0.5;
@@ -73,4 +73,11 @@
 .link {
   width: auto;
   font-weight: 700;
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .img-container {
+    width: 60%;
+    height: 80vh;
+  }
 }

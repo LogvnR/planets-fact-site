@@ -11,8 +11,8 @@ const NavBar = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    modalOpen && (document.body.style.overflow = "hidden");
-    !modalOpen && (document.body.style.overflow = "unset");
+    modalOpen && (document.body.style.position = "fixed");
+    !modalOpen && (document.body.style.position = "relative");
   }, [modalOpen]);
 
   const handleClickBtn = () => {
@@ -27,24 +27,13 @@ const NavBar = (props) => {
     setModalOpen(false);
   };
 
-  const setTheme = (func) => {
-    func();
-  };
-
   return (
     <header className={styles.navbar}>
-      {!props.isMobile && (
-        <Link onClick={setTheme} to="/">
-          <p className={styles["logo-title"]}>The Planets</p>
-        </Link>
-      )}
-      {props.isMobile && (
-        <Link onClick={closeModal} to="/">
-          <p className={styles["logo-title"]}>The Planets</p>
-        </Link>
-      )}
+      <Link onClick={closeModal} to="/">
+        <p className={styles["logo-title"]}>The Planets</p>
+      </Link>
 
-      {!props.isMobile && <DesktopNavBar setTheme={setTheme} />}
+      {!props.isMobile && <DesktopNavBar />}
       {props.isMobile && (
         <Hamburger
           className={styles.hamburger}
