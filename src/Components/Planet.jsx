@@ -35,6 +35,7 @@ const Planet = (props) => {
       {props.isMobile && (
         <main className={styles.planet}>
           <PlanetInfoSelect
+            isMobile={props.isMobile}
             name={props.planet.name}
             overviewTab={overviewTab}
             overviewTabHandler={overviewTabHandler}
