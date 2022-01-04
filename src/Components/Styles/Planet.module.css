@@ -11,3 +11,33 @@
   align-items: center;
   margin-bottom: 1.5rem;
 }
+
+@media only screen and (min-width: 768px) {
+  .planet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-template-rows: 1fr 1fr 1.1fr;
+    grid-template-areas:
+      "photo photo photo photo"
+      "photo photo photo photo"
+      "info info select select";
+  }
+  .desktop-photo {
+    grid-area: photo;
+  }
+
+  .desktop-info {
+    grid-area: info;
+  }
+
+  .desktop-select {
+    grid-area: select;
+  }
+
+  .statistics-container {
+    width: 90%;
+    margin: 2rem auto;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

@@ -29,3 +29,31 @@
   letter-spacing: 1.5px;
   margin: 2em 0;
 }
+
+@media only screen and (min-width: 768px) {
+  .container {
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    border: none;
+    padding: 0 3rem;
+  }
+
+  .option {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    border: thin solid var(--border);
+  }
+
+  .title-number {
+    font-family: var(--font-two);
+    font-size: clamp(8px, 1.2vw, 10px);
+    font-weight: 400;
+    letter-spacing: 1.9px;
+    color: var(--white);
+    margin: 2em;
+  }
+}

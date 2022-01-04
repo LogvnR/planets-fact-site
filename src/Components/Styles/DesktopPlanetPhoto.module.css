@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-container {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.img {
+  height: auto;
+}
+
+.surface-icon {
+  width: 20%;
+  height: auto;
+  bottom: 10%;
+  position: absolute;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-container {
+    width: 80%;
+  }
+}

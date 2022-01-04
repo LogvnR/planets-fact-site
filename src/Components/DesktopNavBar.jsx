@@ -5,7 +5,7 @@ import DesktopNavBarPlanets from "./UI/DesktopNavBarPlanets";
 
 import planets from "../Helpers/data.json";
 
-const DesktopNavBar = () => {
+const DesktopNavBar = (props) => {
   const [mercury, setMercury] = useState(true);
   const [venus, setVenus] = useState(false);
   const [earth, setEarth] = useState(false);

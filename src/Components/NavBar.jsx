@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 
 import styles from "./Styles/NavBar.module.css";
@@ -9,6 +9,11 @@ import DesktopNavBar from "./DesktopNavBar";
 
 const NavBar = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    modalOpen && (document.body.style.overflow = "hidden");
+    !modalOpen && (document.body.style.overflow = "unset");
+  }, [modalOpen]);
 
   const handleClickBtn = () => {
     if (modalOpen === false) {
@@ -22,13 +27,24 @@ const NavBar = (props) => {
     setModalOpen(false);
   };
 
+  const setTheme = (func) => {
+    func();
+  };
+
   return (
     <header className={styles.navbar}>
-      <Link to="/">
-        <p className={styles["logo-title"]}>The Planets</p>
-      </Link>
+      {!props.isMobile && (
+        <Link onClick={setTheme} to="/">
+          <p className={styles["logo-title"]}>The Planets</p>
+        </Link>
+      )}
+      {props.isMobile && (
+        <Link onClick={closeModal} to="/">
+          <p className={styles["logo-title"]}>The Planets</p>
+        </Link>
+      )}
 
-      {!props.isMobile && <DesktopNavBar />}
+      {!props.isMobile && <DesktopNavBar setTheme={setTheme} />}
       {props.isMobile && (
         <Hamburger
           className={styles.hamburger}
