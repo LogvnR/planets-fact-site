@@ -19,3 +19,16 @@
   letter-spacing: -1px;
   line-height: 52px;
 }
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-title {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

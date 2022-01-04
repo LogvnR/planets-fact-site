@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./Components/NavBar";
@@ -7,10 +8,22 @@ import Background from "./Components/UI/Background";
 import data from "./Helpers/data.json";
 
 const App = () => {
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      if (window.innerWidth < 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    updateScreenSize();
+  }, []);
   return (
     <Background>
       <BrowserRouter>
-        <NavBar />
+        <NavBar isMobile={isMobile} />
 
         <Routes>
           <Route path="" element={<Planet planet={data[0]} />} />

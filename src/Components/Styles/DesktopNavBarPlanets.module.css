@@ -1,0 +1,24 @@
+.link {
+  width: 12%;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 4px inset transparent;
+  border-bottom: 4px inset transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-top 0.35s ease-in-out;
+}
+
+.planet {
+  margin: 1rem 0;
+  font-family: var(--font-two);
+  font-weight: 700;
+  font-size: clamp(10px, 1.45vw, 12px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+}

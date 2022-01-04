@@ -4,8 +4,10 @@ import { Fade as Hamburger } from "hamburger-react";
 import styles from "./Styles/NavBar.module.css";
 import NavModal from "./UI/NavModal";
 import { Link } from "react-router-dom";
+import DesktopNavBarPlanets from "./UI/DesktopNavBarPlanets";
+import DesktopNavBar from "./DesktopNavBar";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleClickBtn = () => {
@@ -26,13 +28,16 @@ const NavBar = () => {
         <p className={styles["logo-title"]}>The Planets</p>
       </Link>
 
-      <Hamburger
-        className={styles.hamburger}
-        color="#fff"
-        size={29}
-        toggled={modalOpen}
-        onToggle={handleClickBtn}
-      />
+      {!props.isMobile && <DesktopNavBar />}
+      {props.isMobile && (
+        <Hamburger
+          className={styles.hamburger}
+          color="#fff"
+          size={29}
+          toggled={modalOpen}
+          onToggle={handleClickBtn}
+        />
+      )}
       {modalOpen && <NavModal close={closeModal} />}
     </header>
   );
