@@ -6,14 +6,13 @@ import NavBarPlanet from "./NavBarPlanet";
 import planets from "../../Helpers/data.json";
 
 const NavModal = (props) => {
-  //   use props.close()
-
   return ReactDOM.createPortal(
     <>
       <div className={styles.modalContainer} onClick={() => props.close()}>
         <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
           {planets.map((planet) => (
             <NavBarPlanet
+              key={planet.name}
               close={props.close}
               className={styles["navbar-item"]}
               name={planet.name}

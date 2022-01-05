@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./Components/NavBar";
@@ -9,17 +9,28 @@ import data from "./Helpers/data.json";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(true);
+  const [size, setSize] = useState(0);
+
+  useLayoutEffect(() => {
+    const updateSize = () => {
+      setSize(window.innerWidth);
+    };
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   useEffect(() => {
     const updateScreenSize = () => {
-      if (window.innerWidth < 768 || window.innerHeight < 500) {
+      if (size < 768 || size < 500) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
       }
     };
     updateScreenSize();
-  }, []);
+  }, [size]);
+
   return (
     <Background>
       <BrowserRouter>
