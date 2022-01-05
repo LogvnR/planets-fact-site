@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     const updateScreenSize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 768 || window.innerHeight < 500) {
         setIsMobile(true);
       } else {
         setIsMobile(false);

@@ -20,7 +20,7 @@
   line-height: 52px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 500px) {
   .navbar {
     flex-direction: column;
     justify-content: center;
