@@ -4,7 +4,6 @@ import { Fade as Hamburger } from "hamburger-react";
 import styles from "./Styles/NavBar.module.css";
 import NavModal from "./UI/NavModal";
 import { Link } from "react-router-dom";
-import DesktopNavBarPlanets from "./UI/DesktopNavBarPlanets";
 import DesktopNavBar from "./DesktopNavBar";
 
 const NavBar = (props) => {
