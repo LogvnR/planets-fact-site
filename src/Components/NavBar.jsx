@@ -6,8 +6,11 @@ import NavModal from "./UI/NavModal";
 import { Link } from "react-router-dom";
 import DesktopNavBar from "./DesktopNavBar";
 
+import planets from "../Helpers/data.json";
+
 const NavBar = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPlanet, setSelectedPlanet] = useState(planets[0].name);
 
   useEffect(() => {
     modalOpen && (document.body.style.position = "fixed");
@@ -24,6 +27,7 @@ const NavBar = (props) => {
 
   const closeModal = () => {
     setModalOpen(false);
+    setSelectedPlanet(planets[0].name);
   };
 
   return (
@@ -32,7 +36,12 @@ const NavBar = (props) => {
         <h1 className={styles["logo-title"]}>The Planets</h1>
       </Link>
 
-      {!props.isMobile && <DesktopNavBar />}
+      {!props.isMobile && (
+        <DesktopNavBar
+          selectedPlanet={selectedPlanet}
+          setSelectedPlanet={setSelectedPlanet}
+        />
+      )}
       {props.isMobile && (
         <Hamburger
           className={styles.hamburger}

@@ -2,12 +2,16 @@ import styles from "../Styles/DesktopNavBarPlanets.module.css";
 import { Link } from "react-router-dom";
 
 const DesktopNavBarPlanets = (props) => {
+  const handleSelectedPlanet = () => {
+    props.setSelectedPlanet(props.planet);
+  };
+
   return (
     <Link className={styles.link} to={`${props.planet}`}>
       <div
-        onClick={props.onClick}
+        onClick={handleSelectedPlanet}
         style={
-          props.planetState
+          props.selectedPlanet === props.planet
             ? { borderTopColor: `var(--${props.planet}-theme)` }
             : { borderBottomColor: "transparent" }
         }
