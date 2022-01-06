@@ -9,11 +9,11 @@ import data from "./Helpers/data.json";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(true);
-  const [size, setSize] = useState(0);
+  const [size, setSize] = useState([0, 0]);
 
   useLayoutEffect(() => {
     const updateSize = () => {
-      setSize(window.innerWidth);
+      setSize([window.innerWidth, window.innerHeight]);
     };
     window.addEventListener("resize", updateSize);
     updateSize();
@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     const updateScreenSize = () => {
-      if (size < 768 || size < 500) {
+      if (size[0] < 768 || size[1] < 500) {
         setIsMobile(true);
       } else {
         setIsMobile(false);

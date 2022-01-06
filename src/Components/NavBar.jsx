@@ -27,9 +27,9 @@ const NavBar = (props) => {
   };
 
   return (
-    <header className={styles.navbar}>
+    <nav className={styles.navbar}>
       <Link className={styles["main-title"]} onClick={closeModal} to="/">
-        <p className={styles["logo-title"]}>The Planets</p>
+        <h1 className={styles["logo-title"]}>The Planets</h1>
       </Link>
 
       {!props.isMobile && <DesktopNavBar />}
@@ -43,7 +43,7 @@ const NavBar = (props) => {
         />
       )}
       {modalOpen && <NavModal close={closeModal} />}
-    </header>
+    </nav>
   );
 };
 

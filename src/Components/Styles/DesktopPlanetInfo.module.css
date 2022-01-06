@@ -97,6 +97,7 @@
 
   .description {
     font-size: 14px;
+    max-width: 400px;
   }
 
   .source,

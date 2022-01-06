@@ -47,7 +47,7 @@
     box-sizing: border-box;
     margin-top: 4rem;
     padding: 0 5rem;
-    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-columns: 0.5fr 0.5fr 0.6fr;
     grid-template-areas:
       "photo photo info"
       "photo photo info"
@@ -77,5 +77,6 @@
   .statistics-container {
     margin: 5.5rem auto 2.5rem;
     padding: 0 13rem;
+    gap: 3rem;
   }
 }
